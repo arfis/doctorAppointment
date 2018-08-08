@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Doctor } from '../../models';
+import { DoctorsService } from '../../services/doctors.service';
 
 @Component({
   selector: 'app-doctor-card-list',
@@ -14,26 +15,32 @@ export class DoctorCardListComponent implements OnInit {
   @Input() error: any;
 
   @Output() refresh = new EventEmitter();
-  @Output() select = new EventEmitter<any>();
+  @Output() focused = new EventEmitter<any>();
 
   activeDoctor;
+  selectedDoctor;
+  fullWidth;
 
-  constructor() { }
+  constructor(private _doctorService: DoctorsService) { }
 
   ngOnInit() {
-  }
-
-  selectDoctor(doctor) {
-    this.select.next(doctor);
+    this._doctorService.selectedDoctor.subscribe(
+      doctor => this.selectedDoctor = doctor
+    );
   }
 
   doctorTracker(index, item) {
     return item.id;
   }
 
+  onfullWidth(fullWidth) {
+    this.fullWidth = fullWidth;
+  }
+
   makeActive(doctor) {
     //this.doctors = [doctor, ...this.doctors.filter(current => current !== doctor)]
     this.activeDoctor = doctor;//this.doctors[0];
+    this.focused.next(doctor);
   }
 
 }

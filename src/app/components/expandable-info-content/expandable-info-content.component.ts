@@ -9,6 +9,7 @@ export class ExpandableInfoContentComponent implements OnInit {
 
   @Input() openingTime;
   @Input() closingTime;
+  @Input() doctor;
 
   constructor() { }
 

@@ -6,8 +6,7 @@
 	<div class="row" *ngIf="doctors">
 		<app-doctor-card-item class="col-lg-6 col-md-12"
                           (click)="makeActive(doctor)"
-                          [ngClass]="{'col-lg-12': doctor === activeDoctor}"
-                          (onSelect)="selectDoctor(doctor)"
+                          [ngClass]="{'col-lg-12': selectedDoctor}"
                           [focused]="doctor === activeDoctor"
                           *ngFor="let doctor of doctors; trackBy:doctorTracker"
                           [doctor]="doctor"></app-doctor-card-item>

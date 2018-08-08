@@ -1,3 +1,27 @@
-<p>
-  reservation-form works!
-</p>
+<div class="wrapper">
+  <h3>{{'makeAnAppointment' | translate:headerInfo}}</h3>
+
+  <div class="info">
+    <div><span class="description">{{'appointment.doctor'|translate}}</span>:
+      <span class="value">{{doctor.name}}</span>
+    </div>
+    <div><span class="description">{{'appointment.time' | translate}}</span>:
+      <span class="value">{{time | timeTransform}}</span>
+    </div>
+  </div>
+
+
+  <mat-form-field class="col-6">
+    <input required type="email" matInput [placeholder]="'appointment.email' | translate">
+  </mat-form-field>
+  <mat-form-field class="col-6">
+    <input required type="phone" matInput [placeholder]="'appointment.number' | translate">
+  </mat-form-field>
+  <mat-form-field class="col-12">
+    <input matInput [placeholder]="'appointment.notes' | translate">
+  </mat-form-field>
+
+  <div class="row">
+    <button mat-raised-button>{{'action.order' | translate}}</button>
+  </div>
+</div>

@@ -10,12 +10,19 @@ import { ReservationFormComponent } from '../reservation-form/reservation-form.c
 export class CalendarDetailRowComponent implements OnInit {
 
   @Input() time;
+  @Input() doctor;
+
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
   reserve() {
-    this.dialog.open(ReservationFormComponent, {});
+    this.dialog.open(ReservationFormComponent, {
+      data: {
+        time: this.time,
+        doctor: this.doctor
+      }
+    });
   }
 }

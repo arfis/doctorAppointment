@@ -14,6 +14,8 @@ export class CalendarComponent implements OnInit {
   selectedDay;
 
   @Input()
+  doctor;
+  @Input()
   openingTime;
   @Input()
   closingTime;

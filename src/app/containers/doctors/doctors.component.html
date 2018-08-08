@@ -4,11 +4,11 @@
     [doctors]="doctors$ | async"
     [loading]="isLoading$ | async"
     [error]="(error$ | async)"
-    (select)="onSelect($event)"
-    (refresh)="onRefresh()">
+    (refresh)="onRefresh()"
+    (focused)="onFocus($event)">
   </app-doctor-card-list>
 
-  <app-doctor-detail-page [@heroState]="detailState" *ngIf="selectedDoctor" [doctor]="selectedDoctor">
+  <app-doctor-detail-page class="detail" [@heroState]="detailState" *ngIf="selectedDoctor" [doctor]="selectedDoctor">
     <div class="close-btn" (click)="closeDetail()">X</div>
   </app-doctor-detail-page>
 </div>

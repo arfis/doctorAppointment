@@ -11,6 +11,7 @@ import {
   DoctorStoreSelectors
 } from '../../root-store';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { DoctorsService } from '../../services/doctors.service';
 
 @Component({
   selector: 'app-jokes',
@@ -37,10 +38,13 @@ export class DoctorsComponent implements OnInit {
   selectedDoctor;
   detailState;
 
-  constructor(private store$: Store<RootStoreState.State>) { }
+  constructor(private store$: Store<RootStoreState.State>,
+              private _doctorService: DoctorsService) { }
 
-  onSelect(doctor) {
-    this.selectedDoctor = doctor;
+  onFocus(doctor) {
+    if (this.selectedDoctor) {
+      this.selectedDoctor = doctor;
+    }
   }
 
   ngOnInit() {
@@ -59,6 +63,10 @@ export class DoctorsComponent implements OnInit {
     this.store$.dispatch(
       new DoctorStoreActions.LoadRequestAction({name: null})
     );
+
+    this._doctorService.selectedDoctor.subscribe(
+      doctor => this.selectedDoctor = doctor
+    );
   }
 
   findDoctors(name) {
@@ -68,7 +76,7 @@ export class DoctorsComponent implements OnInit {
   }
 
   closeDetail() {
-    this.selectedDoctor = null;
+   this._doctorService.selectedDoctor.next(null);
   }
 
   onRefresh() {

@@ -11,6 +11,7 @@ export class DayDetailComponent implements OnChanges {
   @Input() partSize;
   @Input() openingTime;
   @Input() closingTime;
+  @Input() doctor;
 
   timeParts = [];
 

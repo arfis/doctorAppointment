@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 import { Doctor } from '../../models';
+import { DoctorsService } from '../../services/doctors.service';
 
 @Component({
   selector: 'app-doctor-card-item',
@@ -11,15 +12,14 @@ export class DoctorCardItemComponent implements OnInit {
   @Input() doctor: Doctor;
   @Input() focused: boolean;
 
-  @Output() onSelect = new EventEmitter<Doctor>();
+  @Output() onCalendarClick = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor(private _doctorService: DoctorsService) { }
 
   ngOnInit() {
   }
 
   selectDoctor() {
-    this.onSelect.emit(this.doctor);
+    this._doctorService.selectedDoctor.next(this.doctor);
   }
-
 }

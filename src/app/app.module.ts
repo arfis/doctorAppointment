@@ -74,6 +74,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     TimeTransformPipe,
     ReservationFormComponent
   ],
+  providers: [
+    TimeTransformPipe
+  ],
   entryComponents: [
     ReservationFormComponent
   ],

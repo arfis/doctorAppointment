@@ -10,6 +10,15 @@
     "order": "Order"
   },
   "action": {
-    "search": "Find a doctor by name/profession"
-  }
+    "search": "Find a doctor by name/profession",
+    "order": "Order"
+  },
+  "appointment": {
+    "doctor": "Doctor",
+    "time": "Time",
+    "number": "Mobile number",
+    "email": "Email",
+    "note": "Notes"
+  },
+  "makeAnAppointment": "Appointment"
 }
