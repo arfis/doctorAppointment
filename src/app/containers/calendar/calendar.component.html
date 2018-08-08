@@ -1,0 +1,19 @@
+<div class="day-wrapper">
+  <div *ngFor="let dayName of dayNames" class="header day">
+    {{dayName}}
+  </div>
+
+  <div class="day highlight" (click)="selectDay(i)"
+       [ngClass]="{'selected' : i === selectedDay}"
+       *ngFor="let day of days; let i = index">
+    <app-calendar-day [number]="i + 1"></app-calendar-day>
+  </div>
+
+  <ng-container *ngIf="selectedDay">
+    <div class="detail">
+      <app-day-detail [openingTime]="openingTime"
+                      [closingTime]="closingTime"
+                      [partSize]="20" [selected]="selectedDay"></app-day-detail>
+    </div>
+  </ng-container>
+</div>

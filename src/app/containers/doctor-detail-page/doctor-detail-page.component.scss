@@ -1,0 +1,53 @@
+@import "../../../lib/colors";
+
+:host {
+  background: $color-gray;
+  margin: 10px;
+  border-radius: 4px;
+  box-shadow: #1b1e21;
+  display: flex;
+  height: 100%;
+  margin: 0px 10px;
+  padding: 10px;
+}
+
+.header {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.detail {
+  font-size: 14px;
+  width: 100%;
+  padding: 0px 5px;
+
+  &>span {
+    width: 35%;
+    display: inline-block;
+    font-weight: bold;
+  }
+}
+
+.general {
+  margin: 10px 0px;
+}
+
+.description {
+  padding: 10px 5px;
+  font-style:italic;
+}
+
+.cancel {
+  width: auto !important;
+  float:right;
+}
+
+.order-btn {
+  cursor: pointer;
+
+  &:hover {
+    color: $color-secondary;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,11 @@
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="false" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{'doctor.order' | translate}}
+        <mat-icon>calendar_today</mat-icon>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-calendar [openingTime]="openingTime" [closingTime]="closingTime"></app-calendar>
+  </mat-expansion-panel>
+</mat-accordion>

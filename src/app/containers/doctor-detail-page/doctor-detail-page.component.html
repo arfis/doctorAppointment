@@ -1,0 +1,30 @@
+<div class="detail">
+
+  <span class="cancel">
+  <ng-content></ng-content>
+</span>
+
+  <div class="header">
+    <h4>{{doctor.name}}</h4>
+    <img class="img-thumbnail" src="https://cdn.wyza.com.au/media/341936/men-health-doctors-wyza-com-au.jpg">
+    <span class="description">{{doctor.description}}</span>
+  </div>
+
+  <div class="general">
+    <div class="detail">
+      <span>{{'doctor.profession' | translate}}: </span>{{doctor.profession}}
+    </div>
+    <div class="detail">
+      <span>{{'doctor.rating' | translate}}: </span>{{doctor.rating}}/10
+    </div>
+    <div class="detail">
+      <span>{{'doctor.city' | translate}}: </span>{{doctor.city}} {{doctor.zip}}
+    </div>
+    <div class="detail">
+      <span>{{'doctor.openedTime' | translate}}:
+      </span>{{doctor.openingTime | timeTransform}}-{{doctor.closingTime | timeTransform}}
+      <span class="order-btn" (click)="openOrder()">{{'doctor.order' | translate}}</span>
+    </div>
+  </div>
+</div>
+

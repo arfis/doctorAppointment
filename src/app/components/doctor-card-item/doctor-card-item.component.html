@@ -1,0 +1,14 @@
+<mat-card [ngClass]="{'focused': focused}">
+  <mat-card-title>
+    <div class="title-wrapper">
+      <img class="img-thumbnail" src="https://cdn.wyza.com.au/media/341936/men-health-doctors-wyza-com-au.jpg">
+      <div class="details">
+        <h2>{{ doctor.name }} <mat-icon class="detail" (click)="selectDoctor()">info</mat-icon></h2>
+        <div>{{doctor.profession}}</div>
+      </div>
+    </div>
+  </mat-card-title>
+  <mat-card-content>
+    <app-expandable-info-content [closingTime]="doctor.closingTime" [openingTime]="doctor.openingTime"></app-expandable-info-content>
+  </mat-card-content>
+</mat-card>

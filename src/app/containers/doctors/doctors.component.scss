@@ -1,0 +1,23 @@
+@import '../../../lib/colors';
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+app-doctor-detail-page {
+  width: 55%;
+}
+
+app-doctor-card-list {
+  width: 100%;
+}
+
+.close-btn {
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-secondary;
+  }
+}

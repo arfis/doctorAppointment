@@ -1,0 +1,14 @@
+<app-doctor-search (onSearch)="findDoctors($event)"></app-doctor-search>
+<div class="wrapper">
+  <app-doctor-card-list
+    [doctors]="doctors$ | async"
+    [loading]="isLoading$ | async"
+    [error]="(error$ | async)"
+    (select)="onSelect($event)"
+    (refresh)="onRefresh()">
+  </app-doctor-card-list>
+
+  <app-doctor-detail-page [@heroState]="detailState" *ngIf="selectedDoctor" [doctor]="selectedDoctor">
+    <div class="close-btn" (click)="closeDetail()">X</div>
+  </app-doctor-detail-page>
+</div>

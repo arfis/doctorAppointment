@@ -1,0 +1,15 @@
+{
+  "doctor": {
+    "calendar" : "Calendar",
+    "order": "Order",
+    "profession": "Profession",
+    "city": "City",
+    "rating": "Rating",
+    "description": "Description",
+    "openedTime": "Time at work",
+    "order": "Order"
+  },
+  "action": {
+    "search": "Find a doctor by name/profession"
+  }
+}

@@ -1,0 +1,21 @@
+<div *ngIf="loading">
+  <app-loading></app-loading>
+</div>
+<div *ngIf="!loading">
+
+	<div class="row" *ngIf="doctors">
+		<app-doctor-card-item class="col-lg-6 col-md-12"
+                          (click)="makeActive(doctor)"
+                          [ngClass]="{'col-lg-12': doctor === activeDoctor}"
+                          (onSelect)="selectDoctor(doctor)"
+                          [focused]="doctor === activeDoctor"
+                          *ngFor="let doctor of doctors; trackBy:doctorTracker"
+                          [doctor]="doctor"></app-doctor-card-item>
+	</div>
+
+	<div *ngIf="doctors.length === 0">No doctors where found</div>
+</div>
+
+<div *ngIf="error">
+  An error occurred: {{error.message}}
+</div>
