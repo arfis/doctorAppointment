@@ -1,6 +1,6 @@
-# Angular NgRx Chuck Norris Doctor Generator
+# Angular Doctor appointment project
 
-This project is a Chuck Norris Doctor Generator backed by an NgRx Store using best practices as described in this article: [Link to article](https://itnext.io/ngrx-best-practices-for-enterprise-angular-applications-6f00bcdf36d7)
+This project is a Doctor appointment project backed by an NgRx Store using best practices as described in this article: [Link to article](https://itnext.io/ngrx-best-practices-for-enterprise-angular-applications-6f00bcdf36d7)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
