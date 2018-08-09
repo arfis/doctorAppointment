@@ -9,6 +9,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 export class DoctorDetailPageComponent {
 
   @Input() doctor;
+  @Input() list;
 
   constructor() { }
 

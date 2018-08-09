@@ -12,6 +12,7 @@
   <ng-container *ngIf="selectedDay">
     <div class="detail">
       <app-day-detail [doctor]="doctor"
+                      [reservations]="reservations"
                       [openingTime]="openingTime"
                       [closingTime]="closingTime"
                       [partSize]="20" [selected]="selectedDay"></app-day-detail>

@@ -6,12 +6,14 @@
     "city": "City",
     "rating": "Rating",
     "description": "Description",
-    "openedTime": "Time at work",
-    "order": "Order"
+    "openedTime": "Time at work"
   },
   "action": {
-    "search": "Find a doctor by name/profession",
-    "order": "Order"
+    "search": "Start by typing a profession or name...",
+    "order": "Order",
+    "addNewDoctor": "Add doctor",
+    "findDoctor": "Find doctor",
+    "allDoctors": "Doctor list"
   },
   "appointment": {
     "doctor": "Doctor",
@@ -20,5 +22,10 @@
     "email": "Email",
     "note": "Notes"
   },
-  "makeAnAppointment": "Appointment"
+  "order": {
+    "ordered": "ordered"
+  },
+  "makeAnAppointment": "Appointment",
+  "allDoctors": "All doctors",
+  "addDoctor": "Add a new doctor"
 }

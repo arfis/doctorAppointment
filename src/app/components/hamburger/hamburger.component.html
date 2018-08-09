@@ -1,0 +1,21 @@
+<div (click)="activate()" [ngClass]="{'is-active' : isActive}" class="hamburger hamburger--spin">
+  <div class="hamburger-box">
+    <div class="hamburger-inner"></div>
+  </div>
+</div>
+<div [ngClass]="{'is-active' : isActive}" class="drawer">
+  <div class="panel">
+    <div class="item">
+      <span (click)="hide('search')" [routerLink]="'/doctors'" class="text">
+        <mat-icon>search</mat-icon>{{'action.findDoctor' | translate}}</span>
+    </div>
+    <div class="item">
+      <span (click)="hide('addDoctor')" [routerLink]="'addDoctor'" class="text">
+        <mat-icon>face</mat-icon>{{'action.addNewDoctor' | translate}}</span>
+    </div>
+    <div class="item">
+      <span (click)="hide('allDoctors')" [routerLink]="'allDoctors'" class="text">
+        <mat-icon>face</mat-icon>{{'action.allDoctors' | translate}}</span>
+    </div>
+  </div>
+</div>

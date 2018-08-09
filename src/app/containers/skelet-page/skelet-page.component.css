@@ -1,0 +1,39 @@
+.search {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+}
+
+app-doctor-search {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  transition: margin-top .3s;
+}
+
+app-hamburger {
+  display: block;
+  width:80px;
+}
+
+.title-wrapper {
+  height: 80px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.no-results {
+  /*position: absolute;*/
+  /*top: 45%;*/
+  /*width: 75%;*/
+  /*!* display: flex; *!*/
+  /*left: 14%;*/
+  width: 90%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 25%;
+  border: .2px solid #0000001c;
+  padding: 40px;
+  box-shadow: 25px 15px 98px -39px rgba(212,212,212,1);
+}

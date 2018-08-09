@@ -22,9 +22,21 @@ export const selectAllDoctorItems: (
 ) => Doctor[] = featureAdapter.getSelectors(selectDoctorState).selectAll;
 
 export const selectDoctorById = (id: string) =>
-  createSelector(this.selectAllDoctorItems, (allJokes: Doctor[]) => {
-    if (allJokes) {
-      return allJokes.find(p => p.id === id);
+  createSelector(this.selectAllDoctorItems, (doctors: Doctor[]) => {
+    if (doctors) {
+      return doctors.find(p => p.id === id);
+    } else {
+      return null;
+    }
+  });
+
+export const selectDoctorsByName = (query: string) =>
+  createSelector(selectAllDoctorItems, (doctors: Doctor[]) => {
+    if (doctors) {
+      if (query && query.length > 0) {
+        return doctors.filter(p => p.name.toLowerCase().indexOf(query) > -1 ||
+          p.profession.toLowerCase().indexOf(query) > -1);
+      }
     } else {
       return null;
     }

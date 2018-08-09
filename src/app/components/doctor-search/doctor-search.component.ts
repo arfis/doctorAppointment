@@ -22,6 +22,9 @@ export class DoctorSearchComponent implements OnInit, AfterViewInit {
 
   }
 
+  searchDoctors() {
+    console.log('search');
+  }
   ngAfterViewInit() {
     fromEvent(this.searchInput.nativeElement, 'keyup')
       .pipe(debounceTime(200))

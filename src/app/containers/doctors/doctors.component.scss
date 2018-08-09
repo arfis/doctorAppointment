@@ -1,5 +1,10 @@
 @import '../../../lib/colors';
 
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
 .wrapper {
   display: flex;
   flex-direction: row;

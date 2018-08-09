@@ -5,8 +5,8 @@ import {
 
 export const selectError: MemoizedSelector<object, string> = createSelector(
   DoctorStoreSelectors.selectDoctorError,
-  (jokeError: string) => {
-    return jokeError;
+  (error: string) => {
+    return error;
   }
 );
 

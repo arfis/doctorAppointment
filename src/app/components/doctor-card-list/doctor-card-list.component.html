@@ -12,7 +12,7 @@
                           [doctor]="doctor"></app-doctor-card-item>
 	</div>
 
-	<div *ngIf="doctors.length === 0">No doctors where found</div>
+	<!--<div *ngIf="!doctors || doctors?.length === 0">No doctors where found</div>-->
 </div>
 
 <div *ngIf="error">

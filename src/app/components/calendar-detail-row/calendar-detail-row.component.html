@@ -1,6 +1,10 @@
-
 <div class="wrapper">
   <span class="time">{{time | timeTransform}}</span>
-  <div (click)="reserve()" class="reservation">
+  <div (click)="reserve()" [ngClass]="{'reserved': isReserved}" class="reservation">
+    <ng-container *ngIf="isReserved; free">{{'order.ordered' | translate}}</ng-container>
   </div>
 </div>
+
+<ng-template #free>
+
+</ng-template>

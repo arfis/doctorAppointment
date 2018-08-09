@@ -14,7 +14,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { DoctorsService } from '../../services/doctors.service';
 
 @Component({
-  selector: 'app-jokes',
+  selector: 'app-dashboard',
   templateUrl: './doctors.component.html',
   styleUrls: ['./doctors.component.scss'],
   animations: [
@@ -48,9 +48,6 @@ export class DoctorsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.doctors$ = this.store$.select(
-      DoctorStoreSelectors.selectAllDoctorItems
-    );
 
     this.error$ = this.store$.select(
       DoctorStoreSelectors.selectDoctorError
@@ -60,19 +57,18 @@ export class DoctorsComponent implements OnInit {
       DoctorStoreSelectors.selectDoctorIsLoading
     );
 
-    this.store$.dispatch(
-      new DoctorStoreActions.LoadRequestAction({name: null})
-    );
-
     this._doctorService.selectedDoctor.subscribe(
       doctor => this.selectedDoctor = doctor
     );
-  }
 
-  findDoctors(name) {
-    this.store$.dispatch(
-      new DoctorStoreActions.LoadRequestAction({name})
+    this._doctorService.findDoctor.subscribe(
+      name => {
+        this.doctors$ = this.store$.select(
+          DoctorStoreSelectors.selectDoctorsByName(name)
+        );
+      }
     );
+
   }
 
   closeDetail() {

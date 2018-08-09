@@ -11,6 +11,7 @@ export class CalendarDetailRowComponent implements OnInit {
 
   @Input() time;
   @Input() doctor;
+  @Input() isReserved;
 
   constructor(public dialog: MatDialog) { }
 
@@ -18,11 +19,13 @@ export class CalendarDetailRowComponent implements OnInit {
   }
 
   reserve() {
-    this.dialog.open(ReservationFormComponent, {
-      data: {
-        time: this.time,
-        doctor: this.doctor
-      }
-    });
+    if (!this.isReserved) {
+      this.dialog.open(ReservationFormComponent, {
+        data: {
+          time: this.time,
+          doctor: this.doctor
+        }
+      });
+    }
   }
 }

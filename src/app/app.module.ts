@@ -28,6 +28,11 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DoctorDetailPageComponent } from './containers/doctor-detail-page/doctor-detail-page.component';
 import { TimeTransformPipe } from './containers/time-transform.pipe';
 import { ReservationFormComponent } from './components/reservation-form/reservation-form.component';
+import { HamburgerComponent } from './components/hamburger/hamburger.component';
+import { AddDoctorPageComponent } from './containers/add-doctor-page/add-doctor-page.component';
+import { SkeletPageComponent } from './containers/skelet-page/skelet-page.component';
+import { DoctorsService } from './services/doctors.service';
+import { AllDoctorsPageComponent } from './containers/all-doctors-page/all-doctors-page.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   // return new TranslateHttpLoader(http);
@@ -72,10 +77,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     CalendarDetailRowComponent,
     DoctorDetailPageComponent,
     TimeTransformPipe,
-    ReservationFormComponent
+    ReservationFormComponent,
+    HamburgerComponent,
+    AddDoctorPageComponent,
+    SkeletPageComponent,
+    AllDoctorsPageComponent
   ],
   providers: [
-    TimeTransformPipe
+    TimeTransformPipe,
+    DoctorsService
   ],
   entryComponents: [
     ReservationFormComponent

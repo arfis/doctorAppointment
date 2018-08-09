@@ -42,7 +42,73 @@ export class DataService {
       closingTime: 68400,
     }];
 
+  private reservations = [
+    {
+      doctorId: 1,
+      reservations: [
+        {
+          fromTime: 50400,
+          toTime: 52800
+        },
+        {
+          fromTime: 51600,
+          toTime: 52800
+        },
+        {
+          fromTime: 53000,
+          toTime: 52800
+        },
+        {
+          fromTime: 54200,
+          toTime: 52800
+        },
+        {
+          fromTime: 55400,
+          toTime: 52800
+        }
+      ],
+    },
+    {
+      doctorId: 2,
+      reservations: [
+        {
+          fromTime: 50400,
+          toTime: 52800
+        },
+        {
+          fromTime: 54200,
+          toTime: 52800
+        },
+        {
+          fromTime: 57600,
+          toTime: 52800
+        }],
+    },
+    {
+      doctorId: 0,
+      reservations: [
+        {
+          fromTime: 50400,
+          toTime: 52800
+        },
+        {
+          fromTime: 57600,
+          toTime: 52800
+        }]
+    }
+  ];
+
   constructor(private http: HttpClient) {
+  }
+
+  getReservations(doctorId) {
+    const reservations = this.reservations.find(reservation => reservation.doctorId === doctorId);
+
+    if (reservations) {
+      return of(reservations.reservations);
+    } else {
+      return of(null);
+    }
   }
 
   getDoctors({name}): Observable<Doctor[]> {

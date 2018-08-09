@@ -19,6 +19,8 @@ export class CalendarComponent implements OnInit {
   openingTime;
   @Input()
   closingTime;
+  @Input()
+  reservations;
 
   constructor() { }
 
