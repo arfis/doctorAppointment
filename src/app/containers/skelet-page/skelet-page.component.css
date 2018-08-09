@@ -21,6 +21,7 @@ app-hamburger {
   justify-content: center;
   display: flex;
   align-items: center;
+  user-select: none;
 }
 
 .no-results {

@@ -34,8 +34,8 @@ export const selectDoctorsByName = (query: string) =>
   createSelector(selectAllDoctorItems, (doctors: Doctor[]) => {
     if (doctors) {
       if (query && query.length > 0) {
-        return doctors.filter(p => p.name.toLowerCase().indexOf(query) > -1 ||
-          p.profession.toLowerCase().indexOf(query) > -1);
+        return doctors.filter(p => p.name.toLowerCase().indexOf(query.toLowerCase()) > -1 ||
+          p.profession.toLowerCase().indexOf(query.toLowerCase()) > -1);
       }
     } else {
       return null;
