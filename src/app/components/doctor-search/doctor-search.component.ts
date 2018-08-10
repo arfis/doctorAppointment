@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { DoctorStoreActions } from '../../root-store';
@@ -15,6 +15,9 @@ export class DoctorSearchComponent implements OnInit, AfterViewInit {
 
   @Output()
   onSearch = new EventEmitter<any>();
+
+  @Input()
+  inMiddle;
 
   constructor() { }
 

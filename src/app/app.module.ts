@@ -33,6 +33,7 @@ import { AddDoctorPageComponent } from './containers/add-doctor-page/add-doctor-
 import { SkeletPageComponent } from './containers/skelet-page/skelet-page.component';
 import { DoctorsService } from './services/doctors.service';
 import { AllDoctorsPageComponent } from './containers/all-doctors-page/all-doctors-page.component';
+import { LanguageSelectorComponent } from './components/language-selector/language-selector.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   // return new TranslateHttpLoader(http);
@@ -81,7 +82,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HamburgerComponent,
     AddDoctorPageComponent,
     SkeletPageComponent,
-    AllDoctorsPageComponent
+    AllDoctorsPageComponent,
+    LanguageSelectorComponent
   ],
   providers: [
     TimeTransformPipe,

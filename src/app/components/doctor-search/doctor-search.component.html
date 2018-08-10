@@ -1,8 +1,12 @@
-<div class="search-wrapper">
-  <form (submit)="searchDoctors()" autocomplete="nope">
-    <mat-form-field class="full-width" >
-      <input #search matInput [placeholder]="'action.search' | translate" autocomplete="off">
-      <mat-icon matSuffix>search</mat-icon>
-    </mat-form-field>
-  </form>
+<div class="search-container" [ngClass]="{'fullscreen' : inMiddle}">
+  <img class="img-thumbnail"
+       src="http://neohealth.sk/wp-content/uploads/2018/05/logo-text-b.svg">
+  <div class="search-wrapper">
+    <form (submit)="searchDoctors()" autocomplete="nope">
+      <mat-form-field class="full-width">
+        <input #search matInput [placeholder]="'action.search' | translate" autocomplete="off">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </form>
+  </div>
 </div>

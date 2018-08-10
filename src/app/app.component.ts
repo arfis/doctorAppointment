@@ -15,8 +15,5 @@ export class AppComponent {
     translate.addLangs(['sk', 'en']);
     // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use('en');
-    translate.get('doctor.calendar').subscribe((res: string) => {
-      console.log(res);
-    });
   }
 }

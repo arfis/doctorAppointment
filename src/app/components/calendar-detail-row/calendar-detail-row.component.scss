@@ -37,4 +37,8 @@
   background: $color-ordered;
   cursor: not-allowed;
   text-transform: uppercase;
+
+  &:hover {
+    background: $color-ordered;
+  }
 }

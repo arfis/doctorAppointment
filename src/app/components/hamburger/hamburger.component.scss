@@ -81,12 +81,14 @@
   &.is-active {
     width:40%;
     box-shadow: 25px 15px 71px -6px $color-gray;
-    background: $color-lagoon;
+    //background: $color-lagoon;
+    background-color: $color-drawer;
   }
 
   .panel {
     margin: 80px 20px;
-    color: $color-dark-gray !important;
+
+    color: $color-primary !important;
   }
 
   .item {
@@ -99,7 +101,7 @@
     height: 50px;
 
     &:hover {
-      color: white;
+      color: $color-item-text;
     }
 
     .text {
@@ -109,3 +111,8 @@
   }
 }
 
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}

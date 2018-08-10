@@ -1,0 +1,21 @@
+@import '../../../lib/colors';
+
+.flags {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 20px;
+
+  img {
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    border-radius: 0px;
+    cursor: pointer;
+
+    &.selected {
+      border: 1px solid $color-primary;
+    }
+  }
+}

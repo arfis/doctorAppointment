@@ -1,0 +1,31 @@
+{
+  "doctor": {
+    "calendar" : "Kalendar",
+    "order": "Objednavka",
+    "profession": "Profesia",
+    "city": "Mesto",
+    "rating": "Hodnotenie",
+    "description": "Opis",
+    "openedTime": "Pracovna doba"
+  },
+  "action": {
+    "search": "Zacni napisanim mena alebo profesie...",
+    "order": "Order",
+    "addNewDoctor": "Pridaj doktora",
+    "findDoctor": "Najdi doktora",
+    "allDoctors": "Zoznam Doktorov"
+  },
+  "appointment": {
+    "doctor": "Doktor",
+    "time": "Cas",
+    "number": "Mobilne cislo",
+    "email": "Email",
+    "note": "Poznamky"
+  },
+  "order": {
+    "ordered": "objednane"
+  },
+  "makeAnAppointment": "Stretnutie",
+  "allDoctors": "Vsetci doktori",
+  "addDoctor": "Pridaj noveho doktora"
+}

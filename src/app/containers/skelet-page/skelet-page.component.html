@@ -1,11 +1,12 @@
 <div class="search">
   <app-hamburger (updateRoute)="updateRoute($event)"></app-hamburger>
-  <app-doctor-search [ngClass]="{'no-results': !firstSearch && !results}"*ngIf="hasSearch; else title" (onSearch)="findDoctors($event)"></app-doctor-search>
+  <app-doctor-search [inMiddle]="!firstSearch && !results" [ngClass]="{'no-results': !firstSearch && !results}"*ngIf="hasSearch; else title" (onSearch)="findDoctors($event)"></app-doctor-search>
 </div>
 <router-outlet></router-outlet>
 
 <ng-template #title>
   <div class="title-wrapper">
+
     <h3 *ngIf="routeTitle">{{routeTitle | translate}}</h3>
   </div>
 </ng-template>

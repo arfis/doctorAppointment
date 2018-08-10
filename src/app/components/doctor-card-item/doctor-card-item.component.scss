@@ -6,10 +6,17 @@
 
 mat-card {
   margin: 15px;
-  background: $bg-color;
+  background: $color-primary;
+  color: $color-item-text;
 
   &.focused {
     background: $color-yellow;
+
+    .detail {
+      &:hover {
+        color: $color-primary;
+      }
+    }
   }
 }
 
